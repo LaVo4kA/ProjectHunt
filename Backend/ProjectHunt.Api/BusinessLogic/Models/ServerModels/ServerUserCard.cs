@@ -2,22 +2,21 @@
 
 namespace ProjectHunt.Api.BusinessLogic.Models.ServerModels
 {
-    [DatabaseEntity("Secrets")]
-    public class AuthorizeResult
+    public class ServerUserCard
     {
         [DatabaseColumn(ColumnName = "UserId")]
         public string UserId { get; set; }
-
-        [DatabaseColumn(ColumnName = "IsAdmin")]
-        public bool IsAdmin { get; set; }
-
-        [DatabaseColumn(ColumnName = "Password")]
-        public string Password { get; set; }
 
         [DatabaseColumn(ColumnName = "FirstName")]
         public string FirstName { get; set; }
 
         [DatabaseColumn(ColumnName = "SecondName")]
         public string SecondName { get; set; }
+
+        [DatabaseColumn(ColumnName = "Role")]
+        public string Role { get; set; }
+
+        [DatabaseColumn(ColumnName = "Description")]
+        public string Description { get; set; }
     }
 }

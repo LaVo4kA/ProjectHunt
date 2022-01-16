@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -23,30 +22,39 @@ namespace ProjectHunt.Api.Controllers
         [HttpPost]
         [Route("create")]
         [Authorize(Roles = "Admin")]
-        public IActionResult CreateEvent([Required(ErrorMessage = "Тело запроса не должно быть пустым")] [FromBody] CreateEventRequest request)
+        public IActionResult CreateEvent([Required] [FromBody] CreateEventRequest request)
         {
-            var accessCode = EventsService.CreateEvent(request);
+            var eventId = EventsService.CreateEvent(request);
             var userId = this.User.Claims.First().Value;
-            var eventId = EventsService.JoinEvent(accessCode, userId);
+            EventsService.JoinEventAdmin(eventId, userId);
             return new ObjectResult(eventId) { StatusCode = 201 };
+        }
+
+        [HttpPatch]
+        [Route("updateUserEventInfo")]
+        public IActionResult UpdateUserEventInfo([Required] [FromBody] UpdateUserEventInfoRequest request)
+        {
+            var userId = this.User.Claims.First().Value;
+            EventsService.UpdateUserEventInfo(request, userId);
+            return new ObjectResult(new ProjectHuntResponse()) {StatusCode = 200};
+        }
+
+        [HttpPost]
+        [Route("check")]
+        public IActionResult CheckAccessCode([Required] [FromQuery] string accessCode)
+        {
+            var userId = this.User.Claims.First().Value;
+            var eventId = EventsService.CheckAccessCode(accessCode, userId);
+            return new ObjectResult(eventId) { StatusCode = 200 };
         }
 
         [HttpPost]
         [Route("join")]
-        public IActionResult JoinEvent([Required] [FromBody] string accessCode)
+        public IActionResult JoinEvent(JoinEventRequest request)
         {
-            var userId = this.User.Claims.First().Value;
-            var eventId = EventsService.JoinEvent(accessCode, userId);
-            return new ObjectResult(eventId) { StatusCode = 200 };
+            var userId = User.Claims.First().Value;
+            EventsService.JoinEvent(request, userId);
+            return new ObjectResult(new ProjectHuntResponse()) {StatusCode = 200};
         }
-
-        //[HttpDelete]
-        //[Authorize(Roles = "Admin")]
-        //[Route("delete/{eventId}")]
-        //public IActionResult DeleteEvent(Guid eventId)
-        //{
-        //    // todo
-        //    return new ObjectResult(new ProjectHuntResponse()) { StatusCode = 200 };
-        //}
     }
 }

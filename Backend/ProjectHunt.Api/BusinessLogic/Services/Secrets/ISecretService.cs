@@ -7,6 +7,9 @@ namespace ProjectHunt.Api.BusinessLogic.Services.Secrets
     public interface ISecretService
     {
         public AuthorizeResult AuthorizeUser(LoginRequest request);
+
         public Guid CreateUser(RegisterRequest request);
+
+        public bool IsAdmin(string userId);
     }
 }

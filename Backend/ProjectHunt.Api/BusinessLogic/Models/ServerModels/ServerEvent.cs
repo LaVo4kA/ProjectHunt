@@ -7,7 +7,7 @@ namespace ProjectHunt.Api.BusinessLogic.Models.ServerModels
     public class ServerEvent
     {
         [DatabaseColumn(ColumnName = "Id")]
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         [DatabaseColumn(ColumnName = "Name")]
         public string Name { get; set; }

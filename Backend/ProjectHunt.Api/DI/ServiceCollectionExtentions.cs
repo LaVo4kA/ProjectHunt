@@ -2,10 +2,12 @@
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using ProjectHunt.Api.BusinessLogic.Repositories.Catalogs;
 using ProjectHunt.Api.BusinessLogic.Repositories.Events;
+using ProjectHunt.Api.BusinessLogic.Repositories.Projects;
 using ProjectHunt.Api.BusinessLogic.Repositories.Secrets;
 using ProjectHunt.Api.BusinessLogic.Repositories.Users;
 using ProjectHunt.Api.BusinessLogic.Services.Catalogs;
 using ProjectHunt.Api.BusinessLogic.Services.Events;
+using ProjectHunt.Api.BusinessLogic.Services.Projects;
 using ProjectHunt.Api.BusinessLogic.Services.Secrets;
 using ProjectHunt.Api.BusinessLogic.Services.Users;
 
@@ -23,6 +25,8 @@ namespace ProjectHunt.Api.DI
             services.AddSingletonSafely<IEventsRepository, EventsRepository>();
             services.AddSingletonSafely<ICatalogsService, CatalogsService>();
             services.AddSingletonSafely<ICatalogsRepository, CatalogsRepository>();
+            services.AddSingleton<IProjectsService, ProjectsService>();
+            services.AddSingleton<IProjectsRepository, ProjectsRepository>();
             return services;
         }
 

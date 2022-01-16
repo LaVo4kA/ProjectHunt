@@ -7,8 +7,12 @@ namespace ProjectHunt.Api.BusinessLogic.Services.Events
     {
         public string CreateEvent(CreateEventRequest request);
 
-        public string JoinEvent(string accessCode, string userId);
+        public void UpdateUserEventInfo(UpdateUserEventInfoRequest request, string userId);
 
-        public string JoinEventAdmin(string userId);
+        public string CheckAccessCode(string accessCode, string userId);
+
+        public void JoinEventAdmin(string eventId, string userId);
+
+        public void JoinEvent(JoinEventRequest request, string userId);
     }
 }

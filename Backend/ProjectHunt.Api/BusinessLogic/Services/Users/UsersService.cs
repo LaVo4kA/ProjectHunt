@@ -20,11 +20,13 @@ namespace ProjectHunt.Api.BusinessLogic.Services.Users
 
             if (result.Status == DbQueryResultStatus.Conflict)
             {
+                Console.WriteLine(result.ErrorMessage);
                 throw ExceptionsFactory.BadRequest("Пользователь с таким ID уже существует.");
             }
 
             if (result.Status != DbQueryResultStatus.Ok)
             {
+                Console.WriteLine(result.ErrorMessage);
                 throw ExceptionsFactory.InternalServerError("Сервис не исправен. Обратитесь в службу поддержки.");
             }
         }

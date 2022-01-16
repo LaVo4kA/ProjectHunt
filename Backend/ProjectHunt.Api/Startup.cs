@@ -26,6 +26,7 @@ namespace ProjectHunt.Api
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                 .AddCookie(opt =>
                 {
+                    opt.Cookie.MaxAge = System.TimeSpan.FromHours(24);
                     opt.Events.OnRedirectToLogin = context =>
                     {
                         context.Response.StatusCode = 401;
@@ -50,13 +51,29 @@ namespace ProjectHunt.Api
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.Use((context, next) =>
+            {
+                context.Response.Headers.Add("Access-Control-Allow-Origin", "http://localhost:3000");
+                context.Response.Headers.Add("Access-Control-Allow-Methods", "POST, PATCH, PUT, GET, DELETE, OPTIONS");
+                context.Response.Headers.Add("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Origin, Cookie");
+                context.Response.Headers.Add("Access-Control-Allow-Credentials", "true");
+                context.Response.Headers.Add("Access-Control-Expose-Headers", "Set-Cookie");
+                if (context.Request.Method == "OPTIONS")
+                {
+                    context.Response.Headers.Add("Access-Control-Max-Age", "86400");
+                    return context.Response.CompleteAsync();
+                }
+
+                return next.Invoke();
+            });
 
             app.UseEndpoints(endpoints =>
             {

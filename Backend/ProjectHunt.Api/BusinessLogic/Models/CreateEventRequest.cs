@@ -16,6 +16,9 @@ namespace ProjectHunt.Api.BusinessLogic.Models
         public IEnumerable<string> KeyTechnologies { get; set; }
 
         [Required]
+        public IEnumerable<string> Skills { get; set; }
+
+        [Required]
         public DateTime CloseTime { get; set; }
 
         [Required]

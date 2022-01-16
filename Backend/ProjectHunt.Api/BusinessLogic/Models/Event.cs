@@ -1,21 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ProjectHunt.Api.BusinessLogic.Models
 {
     public class Event
     {
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         public string Name { get; set; }
 
         public string AccessCode { get; set; }
 
-        public DateTime CloseTime { get; set; }
+        public string CloseTime { get; set; }
 
         public int MaxProjectPeople { get; set; }
 
-        public IEquatable<string> KeyTechnologies { get; set; }
+        public IEnumerable<string> KeyTechnologies { get; set; }
 
-        public IEquatable<string> Roles { get; set; }
+        public IEnumerable<string> Roles { get; set; }
     }
 }
