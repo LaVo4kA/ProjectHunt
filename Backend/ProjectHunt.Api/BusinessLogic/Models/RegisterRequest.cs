@@ -4,7 +4,7 @@ namespace ProjectHunt.Api.BusinessLogic.Models
 {
     public class RegisterRequest
     {
-        [Required(ErrorMessage = "E-mail должен быть указан")]
+        [Required(ErrorMessage = "Email должен быть указан")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 

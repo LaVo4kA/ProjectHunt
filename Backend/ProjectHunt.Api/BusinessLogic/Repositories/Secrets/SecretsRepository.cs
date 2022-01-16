@@ -89,6 +89,29 @@ namespace ProjectHunt.Api.BusinessLogic.Repositories.Secrets
             }
         }
 
+        public DbQueryResult<bool> IsAdmin(string userId)
+        {
+            var sql = GetIsAdminSql(userId);
+            var connection = new SqlConnection(ConnectionString);
+
+            if (!connection.TryConnect())
+            {
+                return DbQueryResult<bool>.Error("Отсутствует подключение к серверу с БД");
+            }
+
+            try
+            {
+                var isAdmin = connection.ExecuteScalar<bool>(sql);
+                connection.Close();
+                return DbQueryResult<bool>.Ok(isAdmin);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return DbQueryResult<bool>.Conflict("Ошибка");
+            }
+        }
+
         private string GetCreateUserSql(string login, string hashedPassword, Guid userId)
         {
             return $@"
@@ -107,8 +130,18 @@ WHERE s.Login = '{login}'
         private string GetAuthorizeSql(string login)
         {
             return $@"
-SELECT UserId, IsAdmin, Password FROM [ProjectHunt].dbo.Secrets as s
+SELECT s.UserId, s.IsAdmin, s.Password, u.FirstName, u.SecondName FROM [ProjectHunt].dbo.Secrets as s
+JOIN [ProjectHunt].dbo.Users as u
+    ON u.UserId = s.UserId
 WHERE s.Login = '{login}'
+";
+        }
+
+        private string GetIsAdminSql(string userId)
+        {
+            return $@"
+SELECT isAdmin FROM [ProjectHunt].dbo.Secrets
+WHERE UserId = '{userId}'
 ";
         }
     }

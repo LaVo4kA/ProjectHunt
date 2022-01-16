@@ -30,8 +30,9 @@ namespace ProjectHunt.Api.BusinessLogic.Repositories.Users
                 connection.Close();
                 return DbQueryResult.Ok();
             }
-            catch
+            catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 return DbQueryResult.Conflict("Ошибка при создании пользователя");
             }
         }
@@ -39,7 +40,7 @@ namespace ProjectHunt.Api.BusinessLogic.Repositories.Users
         private string GetCreateUserSql(Guid id, string firstName, string secondName, string email)
         {
             return @$"
-INSERT [ProjectHunt].dbo.Users VALUES ('{firstName}', '{secondName}', '{email}', '{id}')
+INSERT [ProjectHunt].dbo.Users VALUES ('{firstName}', '{secondName}', '{email}', '{id}', NULL, NULL, NULL, NULL, 'False')
 ";
         }
     }

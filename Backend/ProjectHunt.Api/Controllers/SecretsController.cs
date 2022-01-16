@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
@@ -23,26 +24,36 @@ namespace ProjectHunt.Api.Controllers
             this.SecretService = secretService ?? throw new ArgumentNullException(nameof(secretService));
         }
 
+        [HttpGet]
+        [Route("isAdmin")]
+        public IActionResult IsAdmin()
+        {
+            var userId = this.User.Claims.First().Value;
+            var isAdmin = SecretService.IsAdmin(userId);
+            return new ObjectResult(isAdmin) {StatusCode = 200};
+        }
+
         [HttpPost]
-        [Route("users/login")]
+        [Route("login")]
         public IActionResult AuthorizeUser([FromBody, Required(ErrorMessage = "Тело запроса не должно быть пустым")] LoginRequest request)
         {
             var authorizeResult = SecretService.AuthorizeUser(request);
             Authenticate(authorizeResult.UserId, authorizeResult.IsAdmin);
-            return new ObjectResult(new ProjectHuntResponse()) { StatusCode = 200 };
+            authorizeResult.Password = "";
+            return new ObjectResult(authorizeResult) { StatusCode = 200 };
         }
 
         [HttpPost]
-        [Route("users/create")]
+        [Route("create")]
         public IActionResult CreateUser([FromBody, Required(ErrorMessage = "Тело запроса не должно быть пустым")] RegisterRequest request)
         {
             var userId = SecretService.CreateUser(request);
             Authenticate(userId.ToString(), false);
-            return new ObjectResult(new ProjectHuntResponse()) { StatusCode = 201 };
+            return new ObjectResult(userId) { StatusCode = 201 };
         }
 
         [HttpPost]
-        [Route("users/logout")]
+        [Route("logout")]
         [Authorize]
         public async Task<IActionResult> Logout()
         {

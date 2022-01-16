@@ -25,6 +25,12 @@ namespace ProjectHunt.Api.BusinessLogic.Services.Secrets
             var hashedPassword = CryptPassword(request.Password);
             var authorizeResult = SecretsRepository.AuthorizeUser(request.Login);
 
+            if (authorizeResult.Status == DbQueryResultStatus.Conflict)
+            {
+                Console.WriteLine(authorizeResult.ErrorMessage);
+                throw ExceptionsFactory.Unauthorized("Неправильный логин и(или) пароль.");
+            }
+
             if (authorizeResult.Status != DbQueryResultStatus.Ok)
             {
                 Console.WriteLine(authorizeResult.ErrorMessage);
@@ -36,7 +42,7 @@ namespace ProjectHunt.Api.BusinessLogic.Services.Secrets
                 return authorizeResult.Result;
             }
 
-            throw ExceptionsFactory.Unauthorized("Неправильный логин или пароль.");
+            throw ExceptionsFactory.Unauthorized("Неправильный логин и(или) пароль.");
         }
 
         public Guid CreateUser(RegisterRequest request)
@@ -47,7 +53,7 @@ namespace ProjectHunt.Api.BusinessLogic.Services.Secrets
             if (userId.Status == DbQueryResultStatus.Conflict)
             {
                 Console.WriteLine(userId.ErrorMessage);
-                throw ExceptionsFactory.InternalServerError("Пользователь с таким логином уже существует.");
+                throw ExceptionsFactory.BadRequest("Пользователь с таким логином уже существует.");
             }
 
             if (userId.Status != DbQueryResultStatus.Ok)
@@ -59,6 +65,25 @@ namespace ProjectHunt.Api.BusinessLogic.Services.Secrets
             UsersService.CreateUser(userId.Result, request.FirstName, request.SecondName, request.Email);
 
             return userId.Result;
+        }
+
+        public bool IsAdmin(string userId)
+        {
+            var isAdmin = SecretsRepository.IsAdmin(userId);
+
+            if (isAdmin.Status == DbQueryResultStatus.Conflict)
+            {
+                Console.WriteLine(isAdmin.ErrorMessage);
+                throw ExceptionsFactory.BadRequest("Пользователь с таким логином уже существует.");
+            }
+
+            if (isAdmin.Status != DbQueryResultStatus.Ok)
+            {
+                Console.WriteLine(isAdmin.ErrorMessage);
+                throw ExceptionsFactory.InternalServerError("Сервис не исправен. Обратитесь в службу поддержки.");
+            }
+
+            return isAdmin.Result;
         }
 
         private string CryptPassword(string password)

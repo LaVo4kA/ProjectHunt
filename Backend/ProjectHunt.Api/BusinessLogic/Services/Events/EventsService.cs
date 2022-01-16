@@ -20,7 +20,7 @@ namespace ProjectHunt.Api.BusinessLogic.Services.Events
         public string CreateEvent(CreateEventRequest request)
         {
             var accessCode = Guid.NewGuid().ToString()[..8];
-            var eventId = Guid.NewGuid();
+            var eventId = Guid.NewGuid().ToString();
             var serviceEvent = new ServerEvent()
             {
                 AccessCode = accessCode,
@@ -46,37 +46,90 @@ namespace ProjectHunt.Api.BusinessLogic.Services.Events
 
             CreateKeyTechnologiesForEvent(request.KeyTechnologies, serviceEvent.Id);
             CreateRolesForEvent(request.Roles, serviceEvent.Id);
+            CreateSkillsForEvent(request.Skills, serviceEvent.Id);
 
-            return accessCode;
+            return eventId;
         }
 
-        public string JoinEvent(string accessCode, string userId)
+        public void UpdateUserEventInfo(UpdateUserEventInfoRequest request, string userId)
         {
-            var myEvent = EventsRepository.CheckEvent(accessCode);
+            var dbResult = EventsRepository.UpdateUserEventInfo(request, userId);
 
-            if (myEvent.Status == DbQueryResultStatus.Conflict || myEvent.Status == DbQueryResultStatus.Error)
+            if (dbResult.Status == DbQueryResultStatus.Conflict)
             {
-                Console.WriteLine(myEvent.ErrorMessage);
+                Console.WriteLine(dbResult.ErrorMessage);
+                throw ExceptionsFactory.InternalServerError("Не удалось обновить информацию о мероприятии");
+            }
+
+            if (dbResult.Status != DbQueryResultStatus.Ok)
+            {
+                Console.WriteLine(dbResult.ErrorMessage);
+                throw ExceptionsFactory.InternalServerError("Сервис не исправен. Обратитесь в службу поддержки.");
+            }
+        }
+
+        public string CheckAccessCode(string accessCode, string userId)
+        {
+            var eventId = EventsRepository.CheckAccess(accessCode);
+
+            if (eventId.Status == DbQueryResultStatus.Conflict || eventId.Status == DbQueryResultStatus.Error)
+            {
+                Console.WriteLine(eventId.ErrorMessage);
                 throw ExceptionsFactory.InternalServerError("Не удалось войти в мероприятие.");
             }
 
-            if (myEvent.Status != DbQueryResultStatus.Ok)
+            if (eventId.Status != DbQueryResultStatus.Ok)
             {
-                Console.WriteLine(myEvent.ErrorMessage);
+                Console.WriteLine(eventId.ErrorMessage);
                 throw ExceptionsFactory.InternalServerError("Сервис не исправен. Обратитесь в службу поддержки.");
             }
 
-            if (myEvent.Result == null)
+            if (eventId.Result == null)
             {
-                throw ExceptionsFactory.NotFound("Мероприятия не найдено");
+                throw ExceptionsFactory.NotFound("Мероприятие не найдено");
             }
 
-            EventsRepository.JoinEvent(myEvent.Result, userId);
+            IsInEvent(eventId.Result, userId);
 
-            return myEvent.Result;
+            return eventId.Result;
         }
 
-        private void CreateKeyTechnologiesForEvent(IEnumerable<string> technologies, Guid eventId)
+        public void JoinEventAdmin(string eventId, string userId)
+        {
+            var dbResult = EventsRepository.JoinEventAdmin(eventId, userId);
+
+            if (dbResult.Status == DbQueryResultStatus.Conflict || dbResult.Status == DbQueryResultStatus.Error)
+            {
+                Console.WriteLine(dbResult.ErrorMessage);
+                throw ExceptionsFactory.InternalServerError("Не удалось создать админа для мероприятия.");
+            }
+
+            if (dbResult.Status != DbQueryResultStatus.Ok)
+            {
+                Console.WriteLine(dbResult.ErrorMessage);
+                throw ExceptionsFactory.InternalServerError("Сервис не исправен. Обратитесь в службу поддержки.");
+            }
+        }
+
+        public void JoinEvent(JoinEventRequest request, string userId)
+        {
+            IsInEvent(request.EventId, userId);
+            var dbResult = EventsRepository.JoinEvent(request, userId);
+
+            if (dbResult.Status == DbQueryResultStatus.Conflict || dbResult.Status == DbQueryResultStatus.Error)
+            {
+                Console.WriteLine(dbResult.ErrorMessage);
+                throw ExceptionsFactory.InternalServerError("Не удалось вступить в мероприятие.");
+            }
+
+            if (dbResult.Status != DbQueryResultStatus.Ok)
+            {
+                Console.WriteLine(dbResult.ErrorMessage);
+                throw ExceptionsFactory.InternalServerError("Сервис не исправен. Обратитесь в службу поддержки.");
+            }
+        }
+
+        private void CreateKeyTechnologiesForEvent(IEnumerable<string> technologies, string eventId)
         {
             var dbResult = EventsRepository.CreateKeyTechnologiesForEvent(technologies, eventId);
 
@@ -93,9 +146,42 @@ namespace ProjectHunt.Api.BusinessLogic.Services.Events
             }
         }
 
-        private void CreateRolesForEvent(IEnumerable<string> roles, Guid eventId)
+        private void CreateRolesForEvent(IEnumerable<string> roles, string eventId)
         {
             var dbResult = EventsRepository.CreateRolesForEvent(roles, eventId);
+
+            if (dbResult.Status == DbQueryResultStatus.Conflict || dbResult.Status == DbQueryResultStatus.Error)
+            {
+                Console.WriteLine(dbResult.ErrorMessage);
+                throw ExceptionsFactory.InternalServerError("Не удалось создать роли для мероприятия.");
+            }
+
+            if (dbResult.Status != DbQueryResultStatus.Ok)
+            {
+                Console.WriteLine(dbResult.ErrorMessage);
+                throw ExceptionsFactory.InternalServerError("Сервис не исправен. Обратитесь в службу поддержки.");
+            }
+        }
+
+        private void IsInEvent(string eventId, string userId)
+        {
+            var isInEvent = EventsRepository.IsInEvent(eventId, userId);
+
+            if (isInEvent.Status != DbQueryResultStatus.Ok)
+            {
+                Console.WriteLine(isInEvent.ErrorMessage);
+                throw ExceptionsFactory.InternalServerError("Не пройти проверку.");
+            }
+
+            if (isInEvent.Result)
+            {
+                throw ExceptionsFactory.BadRequest("Пользователь уже состоит в этом мероприятии");
+            }
+        }
+
+        private void CreateSkillsForEvent(IEnumerable<string> skills, string eventId)
+        {
+            var dbResult = EventsRepository.CreateSkillsForEvent(skills, eventId);
 
             if (dbResult.Status == DbQueryResultStatus.Conflict || dbResult.Status == DbQueryResultStatus.Error)
             {
