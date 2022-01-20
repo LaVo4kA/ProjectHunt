@@ -1,0 +1,242 @@
+.profile-user-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.profile-user-title h1{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 54.93px;
+    line-height: 120%;
+    color: #040D14;
+}
+
+.profile-user-title-edit_button{
+    width: 250px;
+    height: 50px;
+    background: #6667AB;
+    border-radius: 20px;
+}
+
+.profile-user-title-edit_button p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFFFFF;
+}
+
+.profile-user-user_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+.profile-user-user_info-card {
+    width: 595px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.profile-user-user_info-card-info {
+    display: flex;
+    padding: 24px 11px;
+}
+
+.profile-user-user_info-card-info img {
+    width: 150px;
+    height: 150px;
+    margin-right: 50px;
+}
+
+.profile-user-user_info-card-info-text{
+    width: 370px;
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22.5px;
+    line-height: 120%;
+    letter-spacing: 0.15px;
+    color: #040D14;
+}
+
+.profile-user-user_info-card-info-text h2{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28.13px;
+    line-height: 120%;
+    color: #040D14;
+    margin-bottom: 10px;
+}
+
+.profile-user-user_info-card-contacts {
+    padding: 24px;
+}
+
+.profile-user-user_info-card-contacts h2{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28.13px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.profile-user-user_info-card-contacts-contact{
+    display: flex;
+    margin-bottom: 10px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+}
+
+.profile-user-user_info-card-contacts-contact img{
+    margin-right: 10px;
+}
+
+.profile-user-user_info-card-contacts-comment {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #3D464D;
+}
+
+.profile-user-event-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+.profile-user-event-title h1 {
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 43.95px;
+    line-height: 100%;
+    letter-spacing: 0.25px;
+    color: #1F1E29;
+}
+
+.profile-user-event-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 35px;
+}
+
+.profile-user-user_info-card-event-about {
+    padding: 24px;
+}
+
+.profile-user-user_info-card-event-about h2{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28.13px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.profile-user-user_info-card-event-about p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #000000;
+}
+
+.profile-user-user_info-card-event-info {
+    padding: 24px;
+}
+
+.profile-user-user_info-card-event-info h2{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28.13px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.profile-user-user_info-card-event-info h3 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.profile-user-user_info-card-event-info-list {
+    margin-bottom: 10px;
+}
+
+.profile-user-user_info-card-event-info-list:last-child {
+    margin-bottom: 0px;
+}
+
+.profile-user-projects-title{
+    margin-bottom: 35px;
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 43.95px;
+    line-height: 100%;
+    letter-spacing: 0.25px;
+    color: #1F1E29;
+}
+
+.profile-event-placeholder {
+    margin-bottom: 35px;
+}
+
+.profile-placeholder {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #3D464D;
+}
+
+.profile-user-event-title-choose{
+    display: flex;
+}
+
+.profile-user-event-title-choose h1{
+    margin-right: 20px;
+}
+
+.profile-user-title-invite_button{
+    padding: 15px 25px;
+    background: #6667AB;
+    border-radius: 20px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFFFFF;
+}

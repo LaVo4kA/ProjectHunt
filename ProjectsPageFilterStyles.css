@@ -1,0 +1,139 @@
+.title-projects{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.title-projects h2{
+    margin-right: 20px;
+    color: #040D14;
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 43.95px;
+    line-height: 100%;
+    letter-spacing: 0.25px;
+}
+
+.title-projects h2:last-child{
+    margin-right: 0;
+    color: #3D464D;
+}
+
+.filter-hidden{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.projects-input-field-filters{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.one-tup-filters_checkboxes{
+    display: flex;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+    align-items: center;
+}
+
+.one-tup-filters_checkboxes img{
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.one-tup-filters_checkboxes_busy{
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.one-tup-filters_checkboxes_non-description{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.one-tup-filters{
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+.one-tup-filters_buttons{
+    display: flex;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: right;
+    letter-spacing: 0.25px;
+    color: #040D14;
+}
+
+.one-tup-filters_buttons_options{
+    display: flex;
+}
+
+.one-tup-filters_buttons p{
+    margin-right: 5px;
+}
+
+.one-tup-filters_buttons_options p{
+    cursor: pointer;
+}
+
+.projects_selects{
+    display: flex;
+}
+
+.projects_selects .custom-select:last-child{
+    margin-left: 10px;
+}
+
+.event-main-title{
+    display: flex;
+}
+
+.create-project-button{
+    display: flex;
+    width: 196px;
+    height: 50px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFFFFF;
+    background: #6667AB;
+    border-radius: 20px;
+}
+
+.create-project-button:hover{
+    background: #7071C9;
+}
+
+.create-project-button img{
+    width: 18px;
+    height: 18px;
+    margin: 15px 10px;
+}
+
+.create-project-button p{
+    margin: 15px 10px 15px 0px;
+}

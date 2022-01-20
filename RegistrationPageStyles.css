@@ -1,0 +1,103 @@
+.registration-page{
+    position: absolute;
+    top: calc(50% - 430px);
+    left: calc(50% - 223px);
+}
+
+.registration-page img{
+    display: block;
+    margin: auto;
+    margin-bottom: 13px;
+}
+
+.registration-main{
+    margin: auto;
+    width: 445px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 50px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 60px 30px;
+}
+
+.registration-main-title{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28.13px;
+    line-height: 120%;
+    text-align: center;
+    color: #040D14;
+    margin-bottom: 30px;
+}
+
+.registration-main-inputs{
+    margin-bottom: 30px;
+}
+
+.registration-main-inputs input{
+    width: 385px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.6);
+    padding: 11.5px 16px;
+    margin-bottom: 15px;
+}
+
+.registration-main-inputs input:focus{
+    background: #FFFFFF;
+    border: 1px solid #9F87FF;
+    box-shadow: 0px 0px 0px 3px rgba(159, 135, 255, 0.2);
+    border-radius: 20px;
+}
+
+.registration-main-inputs input:last-child{
+    margin-bottom: 0px;
+}
+
+.registration-main-create{
+    margin: auto;
+    width: 250px;
+    background: #6667AB;
+    border-radius: 20px;
+    padding: 15px 37.5px;
+    margin-bottom: 15px;
+}
+
+.registration-main-create:hover{
+    background: #7071C9;
+    cursor: pointer;
+}
+
+.registration-main-create p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.registration-main-bottom_text p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.25px;
+    color: #040D14;
+}
+
+.registration-main-bottom_text a:hover{
+    text-decoration-line: underline;
+    text-decoration-skip-ink: none;
+}

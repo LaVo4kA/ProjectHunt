@@ -1,0 +1,82 @@
+.join-event-page-before{
+    width: 900px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+.join-event-page-before-role-title,
+.join-event-page-before-skills-title{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28.13px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.join-event-page-before-skills-list{
+    display: flex;
+    margin-top:15px;
+    padding-left: 8px;
+    width: 595px;
+}
+
+.join-event-page-options{
+    display: flex;
+    justify-content: space-between;
+}
+
+.join-event-page-text{
+    width: 1220px;
+    padding: 11.5px 16px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    height: 115px;
+    margin-bottom: 25px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+}
+
+.join-event-page-join{
+    position: absolute;
+    right: 0;
+    width: 250px;
+    height: 50px;
+    background: #6667AB;
+    border-radius: 20px;
+    padding: 15px 55px;
+}
+
+.join-event-page-join:hover{
+    background: #7071C9;
+    cursor: pointer;
+}
+
+.join-event-page-join-wrapper{
+    position: relative;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.join-event-page-join p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFFFFF;
+}

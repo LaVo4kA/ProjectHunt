@@ -1,0 +1,18 @@
+.technologies-list ul {
+    display: flex;
+}
+
+.technologies-list li {
+    background: #D9EBFF;
+    border-radius: 6.875px;
+    margin-right: 8px;
+    padding: 5.5px 11px;
+
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.15px;
+    color: #3366BB;
+}

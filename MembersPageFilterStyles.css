@@ -1,0 +1,98 @@
+.title-members{
+    display: flex;
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 43.95px;
+    line-height: 100%;
+    letter-spacing: 0.25px;
+    margin-bottom: 25px;
+}
+
+.title-members h2{
+    margin-right: 20px;
+    color: #040D14;
+}
+
+.title-members h2:last-child{
+    margin-right: 0;
+    color: #3D464D;
+}
+
+.filter-hidden{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.members-input-field-filters{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.one-tup-filters_checkboxes{
+    display: flex;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+    align-items: center;
+}
+
+.one-tup-filters_checkboxes img{
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.one-tup-filters_checkboxes_busy{
+    display: flex;
+    margin-right: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.one-tup-filters_checkboxes_non-description{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.one-tup-filters{
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+
+.one-tup-filters_buttons{
+    display: flex;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: right;
+    letter-spacing: 0.25px;
+    color: #040D14;
+}
+
+.one-tup-filters_buttons_options{
+    display: flex;
+}
+
+.one-tup-filters_buttons p{
+    margin-right: 5px;
+}
+
+.one-tup-filters_buttons_options p{
+    cursor: pointer;
+}

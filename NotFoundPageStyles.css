@@ -1,0 +1,19 @@
+.not-found-page{
+    width: 500px;
+    height: 100%;
+    margin: 12% auto;
+}
+
+.not-found-page img{
+    margin-bottom: 75px;
+}
+
+.not-found-page-text{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 54.93px;
+    line-height: 120%;
+    color: #040D14;
+    margin-bottom: 50%;
+}

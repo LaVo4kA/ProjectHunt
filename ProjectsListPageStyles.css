@@ -1,0 +1,120 @@
+.projects-page-empty{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 26.5px 20px;
+}
+
+.projects-page-empty p{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22.5px;
+    line-height: 120%;
+    letter-spacing: 0.15px;
+    color: #1F1E29;
+}
+
+.projects-page-title{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.projects-page-title h1{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 54.93px;
+    line-height: 120%;
+    color: #040D14;
+}
+
+.projects-page-title-accessCode p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14.4px;
+    line-height: 140%;
+    letter-spacing: 0.0025em;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.projects-page-title-accessCode-code{
+    background: rgba(159, 135, 255, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    width: 118px;
+    padding: 7px 16px;
+    margin-left: auto;
+    height: 32px;
+}
+
+.projects-page-title-accessCode-code p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    color: #6667AB;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.event-name{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 54.93px;
+    line-height: 120%;
+    color: #040D14;
+    margin-bottom: 30px;
+}
+
+.title-lists {
+    display: flex;
+    margin-bottom: 42px;
+}
+
+.title-lists div {
+    padding: 16px 20px;
+    width: 205;
+    height: 50;
+    border-radius: 20px;
+}
+
+.title-lists a {
+    text-decoration: none;
+}
+
+.projects_project-list {
+    background: #6667AB;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    margin-right: 30px;
+    color: #FFFFFF;
+}
+
+.projects_project-list:hover{
+    background: #7071C9;
+}
+
+.projects_members-list {
+    background: #F2F2F2;
+    border: 1px solid #DDDEDF;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    color: #040D14;
+}
+
+.projects_members-list:hover {
+    background: #DDDEDF;
+}

@@ -1,0 +1,281 @@
+.header{
+    height: 75px;
+    box-shadow: inset 0px -2px 0px rgba(123, 97, 255, 0.5);
+    margin-bottom: 55px;
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1220px;
+    align-items: center;
+}
+
+.header-content-profile{
+    display: flex;
+    align-items: center;
+}
+
+.header-content-profile-bell {
+    width: 40px;
+    height: 40px;
+}
+
+.header-content-profile-bell:hover{
+    cursor: pointer;
+}
+
+.header-content-profile-user{
+    display: flex;
+    align-items: center;
+    padding: 13px;
+}
+
+.header-content-profile-user p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.25px;
+    color: #3D464D;
+    margin-right: 13px;
+}
+
+.header-content-profile-user img{
+    width: 48px;
+    height: 48px;
+}
+
+.header-content-profile-user-photo{
+    position: relative;
+}
+
+.header-content-profile-user-photo-select{
+    position: absolute;
+    top: 62px;
+    left: -104px;
+    width: 140px;
+}
+
+.header-content-profile-user-photo-select img{
+    display: block;
+    margin-right: 8px;
+    margin-left: auto;
+    width: 10px;
+    height: 6px;
+}
+
+.header-content-profile-user-photo ul{
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 8px 16px;
+    box-shadow: 0px 20px 50px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.header-content-profile-user-photo li{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    color: #6667AB;
+}
+
+.header-content-profile-user-photo li:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.header-content-profile-user-photo-photo:hover{
+    cursor: pointer;
+}
+
+.header-content-profile-notifications{
+    position: relative;
+}
+
+.notification-cross-box{
+    display: flex;
+    justify-content: end;
+}
+
+.notification-cross-box img{
+    width: 10px;
+    height: 10px;
+}
+
+.notification-cross-box img:hover{
+    cursor: pointer;
+}
+
+.notifications-box{
+    z-index: 100;
+    position: absolute;
+    top: 58px;
+    left: -305px;
+}
+
+.notifications-box-polygon{
+    display: block;
+    width: 11px;
+    height: 6px;
+    margin-right: 42px;
+    margin-left: auto;
+}
+
+.notification-empty{
+    margin: auto;
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #000000;
+    margin-top: 30.5px;
+}
+
+.notifications-main{
+    align-items: center;
+    width: 372px;
+    min-height: 126px;
+    max-height: 400px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 20px;
+    overflow: auto;
+}
+
+.notification{
+    width: 332px;
+    background: #FFFFFF;
+    border: 1px solid #6667AB;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 12px 18px 24px 24px;
+    margin-bottom: 10px;
+}
+
+.notification-main{
+    display: flex;
+}
+
+.notification-main-warning-box{
+    display: flex;
+    background: #F2F2F2;
+    border-radius: 10px;
+    width: 56px;
+    height: 56px;
+    padding: 14px;
+    margin-right: 8px;
+}
+
+.notification-main-content a:hover{
+    text-decoration-line: underline;
+}
+
+.notification-main-content h3{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.25px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.notification-main-content p{
+    width: 204px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11.52px;
+    line-height: 140%;
+    color: #000000;
+}
+
+.notification-owner{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11.52px;
+    line-height: 140%;
+    color: #6667AB;
+}
+
+.notification-role {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11.52px;
+    line-height: 140%;
+    color: #D9EBFF;
+}
+
+.notification-project {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 11.52px;
+    line-height: 140%;
+    color: #6667AB;
+}
+
+.header-content-profile-notifications-bell_box{
+    position: relative;
+}
+
+.header-content-profile-notifications-count{
+    top: 0;
+    right: 5px;
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: #E70000;
+    border: 2px solid #FFFFFF;
+    border-radius: 100px;
+}
+
+.header-content-profile-notifications-count p{
+    margin: auto;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 100%;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.notifications-main::-webkit-scrollbar{
+    width: 4px;
+}
+.notifications-main::-webkit-scrollbar:hover{
+  cursor: pointer;
+}
+
+.notifications-main::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+}
+
+.notifications-main::-webkit-scrollbar-track-piece:start {
+    margin-top: 5px; 
+}
+
+.notifications-main::-webkit-scrollbar-track-piece:end {
+    margin-bottom: 5px; 
+}
+
+.notifications-main::-webkit-scrollbar-track{
+    margin-top: 5px;
+}

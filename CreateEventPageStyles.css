@@ -1,0 +1,219 @@
+.create-event-star{
+    color: #9F87FF;
+}
+
+.create-event-title-text{
+    width: 900px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #fd0000;
+
+    margin-bottom: 25px;
+}
+
+.create-event-date_people{
+    display: flex;
+    justify-content: space-between;
+}
+
+.create-event-input_title{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28.13px;
+    line-height: 120%;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.create-event-name-name{
+    margin-bottom: 25px;
+}
+
+.create-event-name-name-input{
+    width: 800px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 11.5px 16px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+}
+
+.create-event-date_people-date-input{
+    width: 375px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 11.5px 16px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+}
+
+.create-event-date_people-people-input{
+    width: 395px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 11.5px 16px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+}
+
+.create-event-date_people{
+    width: 800px;
+    margin-bottom: 25px;
+}
+
+.create-event-items-select{
+    width: 800px;
+}
+
+.create-event-items-select div{
+    display: flex;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 11.5px, 16px;
+    align-items: center;
+    padding: 11.5px 16px;
+}
+
+.create-event-items-select img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.create-event-items-select input {
+    border: 0px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+    width: calc(100% - 32px);
+}
+
+.create-event-items-select ul{
+    width: 800px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    max-height: calc(51 * 4px);
+    overflow: auto;
+    position: absolute;
+}
+
+.create-event-items-select li{
+    padding: 13px 16px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+}
+
+.create-event-items-select li:hover{
+    background: rgba(159, 135, 255, 0.1);
+    cursor: pointer;
+}
+
+.create-event-items-select ul::-webkit-scrollbar{
+    width: 4px;
+}
+
+.create-event-items-select ul::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+}
+
+.create-event-items-select ul::-webkit-scrollbar-track-piece:start {
+    margin-top: 5px; 
+}
+
+.create-event-items-select ul::-webkit-scrollbar-track-piece:end {
+    margin-bottom: 5px; 
+}
+
+.create-event-items-select::-webkit-scrollbar-track{
+    margin-top: 5px;
+}
+
+.create-event-values{
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    padding-left: 8px;
+}
+
+.empty-list-placeholder{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24.5341px;
+    line-height: 120%;
+    letter-spacing: 0.204451px;
+    color: #6667AB;
+}
+
+.create-event-technologies
+, .create-event-roles
+, .create-event-skills{
+    margin-bottom: 25px;
+}
+
+.create-event-create{
+    width: 250px;
+    height: 50px;
+    background: #6667AB;
+    border-radius: 20px;
+    padding: 15px 19.5px;
+}
+
+.create-event-create:hover{
+    background: #7071C9;
+    cursor: pointer;
+}
+
+.create-event-create p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFFFFF;
+}

@@ -1,0 +1,47 @@
+.custom-select-profile {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    color: #040D14;
+}
+
+.custom-select-profile div{
+    display: flex;
+    background: #F2F2F2;
+    outline: 1px solid #DDDEDF;
+    border-radius: 20px;
+}
+
+.custom-select-profile div:hover{
+    background: #DDDEDF;
+    cursor: pointer;
+}
+
+.custom-select-profile p{
+    margin: 15px 2px 15px 12px;
+}
+
+.custom-select-profile img {
+    width: 24px;
+    height: 24px;
+    margin: 12px 4px 12px 0px;
+}
+
+.custom-select-profile ul{
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    position: absolute;
+}
+
+.custom-select-profile li{
+    padding: 15px 12px;
+}
+
+.custom-select-profile li:hover{
+    background: #DDDEDF;
+    cursor: pointer;
+}

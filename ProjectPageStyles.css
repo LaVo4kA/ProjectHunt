@@ -1,0 +1,295 @@
+.project-main-description{
+    margin-bottom: 21px;
+}
+
+.project-main-description h1{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35.16px;
+    line-height: 120%;
+    color: #040D14;
+    margin-bottom: 10px;
+}
+
+.project-main-description p{
+    width: 1010px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #000000;
+    margin-bottom: 7px;
+}
+
+.project-main-description p:last-child{
+    margin-bottom: 0px;
+}
+
+.project-main-description h2{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28.13px;
+    line-height: 120%;
+    color: #040D14;
+    margin-bottom: 10px;
+}
+
+/*Создание заголовка команды*/
+.project-team-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.project-team-name{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35.16px;
+    line-height: 120%;
+    color: #040D14;
+}
+
+/*создание кнопки присоединиться*/
+.project-team-join_button{
+    display: flex;
+    width: 250px;
+    height: 50px;
+    background: #6667AB;
+    border-radius: 20px;
+}
+
+.project-team-join_button:hover{
+    background: #7071C9;
+    cursor: pointer;
+}
+
+.project-team-join_button img{
+    width: 18px;
+    height: 18px;
+    margin: 15px 10px 15px 30px;
+}
+
+.project-team-join_button p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 15px 30px 15px 0px;
+}
+
+/*Стили карточки*/
+.project-team-cards-card{
+    margin-bottom: 21px;
+}
+
+.project-team-cards-card:last-child{
+    margin-bottom: 0px;
+}
+
+.project-team-cards-card{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 24px;
+}
+
+.project-team-cards-card:hover{
+    background: #F4F5F8;
+    cursor: pointer;
+}
+
+.project-team-cards-card-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.project-team-cards-card-title h2{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35.16px;
+    line-height: 120%;
+    color: #040D14;
+}
+
+.project-team-cards-card-title-role{
+    background: #F2F2F2;
+    border-radius: 6.875px;
+    height: 35px;
+    margin: 4.5px 0px;
+}
+
+.project-team-cards-card-title-role p{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.15px;
+    color: #6667AB;
+    text-align: center;
+    margin: 5.5px 11px;
+}
+
+.project-team-cards-card-skills h3{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22.5px;
+    line-height: 120%;
+    letter-spacing: 0.15px;
+    color: #6667AB; 
+    margin-bottom: 8px;
+}
+
+.project-team-cards-card-skills p{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22.5px;
+    line-height: 120%;
+    letter-spacing: 0.15px;
+    color: #3366BB;
+}
+
+.project-team-cards-card-title-name{
+    display: flex;
+    align-items: center;
+}
+
+.project-team-cards-card-title-name h2{
+    margin-right: 10px;
+}
+
+.project-team-cards-card-title-name-delete{
+    z-index: 100;
+    width: 114px;
+    height: 33px;
+    display: flex;
+    background: rgba(227, 0, 0, 0.3);
+    border-radius: 6.875px;
+    align-items: center;
+}
+
+.project-team-cards-card-title-name-delete:hover{
+    background: rgba(227, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.project-team-cards-card-title-name-delete p{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.15px;
+    color: #E70000;
+    margin: 5.5px 5.5px 5.5px 11px;
+}
+
+.project-team-cards-card-title-name-delete img{
+    width: 23px;
+    height: 23px;
+    margin: 5.5px 5.5px 5.5px 0px;
+}
+
+/*Team POP-UP*/
+.project-team-join_popup{
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+    position:fixed;
+    top:0px;
+    left: 0px;
+}
+
+.project-team-join_popup-content{
+    width: 660px;
+    background: #FFFFFF;
+    border: 1px solid #E1E0E0;
+    border-radius: 10px;
+    margin: 13% auto 0px auto;
+    padding: 30px;
+}
+
+.project-team-join_popup-content img{
+    margin: 6px 6px 6px 576px
+}
+
+.project-team-join_popup-content img:hover{
+    cursor: pointer;
+}
+
+.project-team-join_popup-content-main h1{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 39px;
+    line-height: 100%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+    margin-bottom: 30px;
+}
+
+.project-team-join_popup-content-main-freeRoles{
+    margin-bottom: 30px;
+}
+
+.project-team-join_popup-content-main-freeRole{
+    background: #FFFFFF;
+    margin-bottom: 10px;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px;
+}
+
+.project-team-join_popup-content-main-freeRole:last-child{
+    margin-bottom: 0px;
+}
+
+.project-team-join_popup-content-main-freeRole:hover{
+    cursor: pointer;
+    border: 1px solid #6667AB;
+}
+
+.project-team-join_popup-content-main-freeRole p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    color: #6667AB;
+    margin: 15px;
+}
+
+.project-team-join_popup-content-main-join_button{
+    background: #6667AB;
+    border-radius: 20px;
+    padding: 16px;
+    margin-bottom: 30px;
+}
+
+.project-team-join_popup-content-main-join_button p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.project-team-join_popup-content-main-join_button:hover{
+    background: #7071C9;
+    cursor: pointer;
+}

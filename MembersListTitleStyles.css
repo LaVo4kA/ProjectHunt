@@ -1,0 +1,56 @@
+.event-name{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 54.93px;
+    line-height: 120%;
+    color: #040D14;
+    margin-bottom: 30px;
+}
+
+.title-lists {
+    display: flex;
+    margin-bottom: 42px;
+}
+
+.title-lists div {
+    padding: 16px 20px;
+    width: 205;
+    height: 50;
+    border-radius: 20px;
+}
+
+.title-lists a {
+    text-decoration: none;
+}
+
+.members_project-list {
+    background: #F2F2F2;
+    border: 1px solid #DDDEDF;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    margin-right: 30px;
+    color: #040D14;
+}
+
+.members_project-list:hover {
+    background: #DDDEDF;
+}
+
+.members_members-list {
+    background: #6667AB;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.members_members-list:hover{
+    background: #7071C9;
+}

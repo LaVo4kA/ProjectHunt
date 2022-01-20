@@ -1,0 +1,105 @@
+.login {
+    position: absolute;
+    top: calc(50% - 310px);
+    left: calc(50% - 223px);
+    width: 445px;
+    margin: auto;
+}
+
+.login img{
+    margin: 0px 30px 13px 30px
+}
+
+.login-main {
+    background: #FFFFFF;
+    box-shadow: 0px 20px 50px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 60px 0px;
+}
+
+.login-main-label {
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28.13px;
+    line-height: 120%;
+    text-align: center;
+    color: #040D14;
+    margin: 0px 30px 30px 30px;
+}
+
+.login-main-inputs {
+    width: 375px;
+    margin: 0px 35px 30px 35px;
+}
+
+.login-main-inputs input {
+    padding: 13px 16px;
+    width: 375px;
+    background: #FFFFFF;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+.login-main-inputs input:focus {
+    background: #FFFFFF;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    border: 1px solid #9F87FF;
+    box-shadow: 0px 0px 0px 3px rgba(159, 135, 255, 0.2);
+}
+
+.login-main-inputs input:last-child{
+    margin: 0px;
+}
+
+.login-main-buttons {
+    position: static;
+    width: 250px;
+    margin: auto;
+}
+
+.login-main-buttons-login {
+    width: 250px;
+    height: 50px;
+    background: #6667AB;
+    border-radius: 20px;
+    border: 1px solid #DDDEDF;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.login-main-buttons-login:hover{
+    background: #7071C9;
+}
+
+.login-main-buttons-registration {
+    border: none;
+    padding: 0px;
+    background: #FFFFFF;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #6667AB;
+    text-align: center;
+}
+
+.login-main-buttons-registration:hover{
+    text-decoration-line: underline;
+    text-decoration-skip-ink: none;
+}

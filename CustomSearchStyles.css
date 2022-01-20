@@ -1,0 +1,30 @@
+.custom-search{
+    display: flex;
+    width: 315px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    align-items: center;
+}
+
+.custom-search input{
+    width: 255px;
+    height: 25px;
+    margin: 11.5px 15px 11.5px 0px;
+    border: 0;
+    padding: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.6);
+
+}
+
+.custom-search img{
+    width: 20px;
+    height: 20px;
+    margin: 14px 8px 14px 16px;
+}

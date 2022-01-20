@@ -1,0 +1,388 @@
+.create-project-page-project-title{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 43.95px;
+    line-height: 100%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+    margin-bottom: 30px;
+}
+
+.create-project-page-project textarea{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+}
+
+.create-project-page-project input{
+    width: 800px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 11.5px 16px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+
+    margin-bottom: 25px;
+}
+
+.create-project-page-project input:focus{
+    border: 1px solid #9F87FF;
+    box-shadow: 0px 0px 0px 3px rgba(159, 135, 255, 0.2);
+}
+
+.create-project-page-project textarea:focus{
+    border: 1px solid #9F87FF;
+    box-shadow: 0px 0px 0px 3px rgba(159, 135, 255, 0.2);
+}
+
+.create-project-page-input_label{
+    display: flex;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.4px;
+    line-height: 84.5%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+    margin-left: 8px;
+    margin-bottom: 8px;
+}
+
+.create-project-page-input_name-title-star{
+    color: #9F87FF;
+}
+
+.create-project-page-project .custom-select{
+    width: 800px;
+    margin-bottom: 25px;
+}
+
+.create-project-page-project textarea{
+    width: 800px;
+    padding: 11.5px 16px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+
+.create-project-page-project-motivation{
+    height: 140px;
+    margin-bottom: 25px;
+}
+
+.create-project-page-project-goal {
+    height: 130px;
+    margin-bottom: 25px;
+}
+
+.create-project-page-project-description {
+    height: 240px;
+    margin-bottom: 35px;
+}
+
+/*Team*/
+.create-project-page-team h2{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 43.95px;
+    line-height: 100%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+    margin-bottom: 30px;
+}
+
+.create-project-page-team input{
+    width: 1220px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 11.5px 16px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+
+    margin-bottom: 25px;
+}
+
+.create-project-page-team input:focus{
+    border: 1px solid #9F87FF;
+    box-shadow: 0px 0px 0px 3px rgba(159, 135, 255, 0.2);
+}
+
+/*Кастомный search-select*/
+.create-project-page-team-input div{
+    display: flex;
+    width: 595px;
+    height: 50px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 11.5px, 16px;
+    align-items: center;
+    padding: 11.5px 16px;
+}
+
+.create-project-page-team-input img {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.create-project-page-team-input input {
+    border: 0px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+    width: calc(100% - 32px);
+}
+
+.create-project-page-team-input ul{
+    width: 595px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    max-height: calc(51 * 4px);
+    overflow: auto;
+    position: absolute;
+}
+
+.create-project-page-team-input li{
+    padding: 13px 16px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+}
+
+.create-project-page-team-input li:hover{
+    background: rgba(159, 135, 255, 0.1);
+    cursor: pointer;
+}
+
+.create-project-page-team-input ul::-webkit-scrollbar{
+    width: 4px;
+}
+
+.create-project-page-team-input ul::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+}
+
+.create-project-page-team-input ul::-webkit-scrollbar-track-piece:start {
+    margin-top: 5px; 
+}
+
+.create-project-page-team-input ul::-webkit-scrollbar-track-piece:end {
+    margin-bottom: 5px; 
+}
+
+.create-project-page-team-input::-webkit-scrollbar-track{
+    margin-top: 5px;
+}
+
+.create-project-page-team-member-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22.5px;
+    line-height: 120%;
+    letter-spacing: 0.15px;
+    color: #040D14;
+    margin-bottom: 10px;
+}
+
+.create-project-page-team-member-title img{
+    width: 18px;
+    height: 18px;
+}
+
+.create-project-page-team-member-title img:hover{
+    cursor: pointer;
+}
+
+.create-project-page-team-member-options{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.create-project-page-team-member-options-skills-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:15px;
+    padding-left: 8px;
+}
+
+.create-project-page-team-member-options-skills-skill{
+    display: flex;
+    background: #F4F5F8;
+    outline: 1.363px solid #6667AB;
+    border-radius: 6.81502px;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.create-project-page-team-member-options-skills-skill:last-child{
+    margin-right: 0;
+}
+
+.create-project-page-team-member-options-skills-skill img{
+    width: 23px;
+    height: 23px;
+    margin: 5.5px 4px 4px 5.5px;
+}
+
+.create-project-page-team-member-options-skills-skill img:hover{
+    cursor: pointer;
+}
+
+.create-project-page-team-member-options-skills-skill-name{
+    padding-left: 10px;
+    padding-right: 10px;
+
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24.5341px;
+    line-height: 120%;
+    letter-spacing: 0.204451px;
+    color: #6667AB;
+
+}
+
+.create-project-page-team-member-options-skills-skill-box{
+    display: flex;
+    align-items: center;
+    height: 32.71px;
+    border-right: 1.363px solid #6667AB;
+}
+
+.create-project-page-team-member-options-skills-skill-img-box{
+    height: 32.71px;
+}
+
+.create-project-page-team-add_member{
+    display: flex;
+    width: 345px;
+    height: 50px;
+    background: #F2F2F2;
+    border: 1px solid #DDDEDF;
+    border-radius: 20px;
+    margin: auto;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.create-project-page-team-add_member:hover{
+    background: #DDDEDF;
+    cursor: pointer;
+}
+
+.create-project-page-team-add_member img{
+    width: 18px;
+    height: 18px;
+    margin-left: 27px;
+    margin-right: 10px;
+}
+
+.create-project-page-team-add_member p{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22.5px;
+    line-height: 120%;
+    letter-spacing: 0.15px;
+    color: #6667AB;
+}
+
+.create-project-page-team-submit{
+    display: flex;
+}
+
+.create-project-page-team-submit-create{
+    width: 250px;
+    height: 50px;
+    background: #6667AB;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.create-project-page-team-submit-create:hover{
+    background: #7071C9;
+    cursor: pointer;
+}
+
+.create-project-page-team-submit-create p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFFFFF;
+    margin: 15px 51px;
+}
+
+.create-project-page-team-submit-cancel{
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.create-project-page-team-submit-cancel:hover{
+    background: #F4F5F8;
+    outline: 1px solid #606970;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.05);
+    cursor: pointer;
+}
+
+.create-project-page-team-submit-cancel p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 100%;
+    color: #6667AB;
+    margin: 15px 16px;
+}
+
+.create-project-page-team-member-options-skills-placeholder{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24.5341px;
+    line-height: 120%;
+    letter-spacing: 0.204451px;
+    color: #6667AB;
+}

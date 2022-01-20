@@ -1,0 +1,29 @@
+.card-list ul {
+    display: flex;
+}
+
+.card-list li {
+    background: #D9EBFF;
+    border-radius: 6.875px;
+    margin-right: 8px;
+    padding: 5.5px 11px;
+
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.15px;
+    color: #3366BB;
+}
+
+.card-list p{
+    font-family: Play;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22.5px;
+    line-height: 120%;
+    letter-spacing: 0.15px;
+    color: #6667AB;
+    margin-bottom: 15px;
+}

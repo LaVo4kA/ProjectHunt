@@ -1,0 +1,65 @@
+.custom-select{
+    min-width: 275px;
+    height: 50px;
+}
+
+.custom-select div{
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.custom-select div img{
+    width: 20px;
+    height: 20px;
+    margin: 14px 16px 14px 8px;
+}
+
+.custom-select div p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 11.5px 0px 11.5px 16px;
+}
+
+.custom-select ul{
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    position: relative;
+    max-height: calc(42 * 4px);
+    overflow: auto;
+}
+
+.custom-select ul::-webkit-scrollbar{
+    width: 4px;
+}
+
+.custom-select ul::-webkit-scrollbar-thumb{
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.custom-select li {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.25px;
+    color: #040D14;
+    padding: 9px 14px 8px 16px;
+}
+
+.custom-select li:hover{
+    background: rgba(159, 135, 255, 0.1);
+    cursor: pointer;
+}
